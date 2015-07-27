@@ -1,0 +1,15 @@
+{
+  "name": "5.1-github-api-profile",
+  "version": "0.0.0",
+  "authors": [
+    "Brent Thomas <brentmt24@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
