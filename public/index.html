@@ -7,8 +7,37 @@
     <title></title>
 </head>
 <body>
+    <div class="top-menu"></div>
+    <div class="left-side">
+        <template class="profile-data">
+            <img src="" alt="">
+            <h1 class="name"></h1>
+            <h3 class="user-name"></h3>
+            <p class="company"></p>
+            <p class="location"></p>
+            <p class="website"></p>
+            <ul>
+                <li>Followers</li>
+                <li>Starred</li>
+                <li>Following</li>
+            </ul>
+        </template>
+    </div>
+    <div class="right-side">
+        <div class="content"></div>
+        <div class="content-top"></div>
+        <template class="content">
+            <h2 class="item-title">{{name}}</h2>
+            <p class="item-details"><!-- star icon -->{{stargazers_count}} <!-- fork icon -->{{forks}}</p>
+            <p class="updated">{{updated_at}} <!-- convert to days --></p>
+        </template>
+    </div>
+
+    <footer></footer>
 
 <script src="jquery/dist/jquery.min.js"></script>
+<script src="handlebars/handlebars.js"></script>
+<script src="github.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
