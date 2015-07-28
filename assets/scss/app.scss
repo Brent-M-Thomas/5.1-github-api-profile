@@ -3,4 +3,56 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import 'font-awesome';
 @import 'bourbon';
 @import 'neat';
+$font-color1: #929496;
 
+
+body {
+    @include outer-container(12);
+    font-family: Arial;
+}
+
+.top-menu {
+    width: 100%;
+    padding: 1em 0 2em 8.125%;
+    background: #EAEDEF;
+    input {
+        width: 30%;
+    }
+    a {
+        text-decoration: none;
+        font-family: Arial;
+        color: black;
+        font-weight: bold;
+        padding-right: 1rem;
+    }
+    i {
+        float: right;
+        padding-right: 1rem;
+    }
+}
+.left-side {
+    @include span-columns(2.5);
+    @include shift(1);
+    margin-top: 1rem;
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+    h1 {
+    font-size: 2em;
+    }
+    h3 {
+        color: $font-color1;
+        padding-bottom: 2rem;
+        border-bottom:  2px solid $font-color1;
+    }
+    li {
+        display: inline-block;
+    }
+}
+
+.right-side {
+    @include span-columns(7.5);
+    margin-top: 1em;
+
+}
