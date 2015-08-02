@@ -4,6 +4,17 @@
     return Handlebars.compile(el.html());
   };
 
+  Handlebars.registerHelper('check-available', function(value) {
+    if (value) {
+      return value;
+    } return 'Not Available';
+  });
+
+  // var notAvailable = function(profileDataItem) {
+  //   if(indexOf(profileDataItem) = -1);
+  //     return "Not Available";
+  // };
+
   $.ajax({
     url: 'https://api.github.com/users/Brent-M-Thomas',
     dataType: 'json',
@@ -24,14 +35,8 @@
       var t = newTemplate('.content');
       loadData.forEach(function(data) {
         $('.content-main').append(t(data));
-
       });
     },
-
-    // beerData.data.forEach(function(beer) {
-    // var addBeer = template(beer);
-
-    // targetEl.innerHTML += addBeer;
 
     error: function() {
       alert('Whatever went wrong must be your fault because it works on my machine!');

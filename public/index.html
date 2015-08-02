@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="top-menu">
-        <!-- Github Icon -->
-        <input type="text"></input>
+        <i class="fa fa-github"></i>
+        <input type="text" Placeholder="Search Github"></input>
         <a href="">Pull Requests</a>
         <a href="">Issues</a>
         <a href="">Gist</a>
@@ -22,14 +22,15 @@
             <img src="{{avatar_url}}" alt="it's a picture.  What else would it be?">
             <h1 class="name">{{name}}</h1>
             <h3 class="user-name">{{login}}</h3>
-            <p class="company">{{company}}</p>
-            <p class="location">{{location}}</p>
-            <p class="website">{{blog}}</p>
             <ul>
-                <li>{{followers}}</li>
-                <li>Starred</li>
-                <li>{{following}}</li>
+                <li><i class="fa fa-envelope-o"></i><p class="email">{{check-available email}}</p></li>
+                <li><i class="fa fa-users"></i><p class="company">{{check-available company}}</p></li>
+                <li><i class="fa fa-map-marker"></i><p class="location">{{check-available location}}</p></li>
+                <li><i class="fa fa-font"></i><p class="website">{{check-available blog}}</p></li>
             </ul>
+                <p>{{followers}}</p>
+                <p>Starred</p>
+                <p>{{following}}</p>
         </template>
     </div>
     <div class="right-side">
@@ -37,8 +38,8 @@
         <div class="content-main">
             <template class="content">
                 <div class="content-item">
-                    <h2 class="item-title">{{name}}</h2>
-                    <p class="item-details"><!-- star icon -->{{stargazers_count}} <!-- fork icon -->{{forks}}</p>
+                    <a href=""><h2 class="item-title">{{name}}</h2></a>
+                    <p class="item-details"><i class="fa fa-star"></i>{{stargazers_count}}<i class="fa fa-code-fork"></i>{{forks}}</p>
                     <p class="updated">{{updated_at}} <!-- convert to days --></p>
                 </div>
             </template>

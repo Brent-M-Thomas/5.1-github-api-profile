@@ -4,19 +4,25 @@ $fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts";
 @import 'bourbon';
 @import 'neat';
 $font-color1: #929496;
+$font-color2: #3F6CC5;
 
 
 body {
     @include outer-container(12);
     font-family: Arial;
+    a{
+        text-decoration: none;
+    }
 }
 
 .top-menu {
     width: 100%;
-    padding: 1em 0 2em 8.125%;
+    padding: 1em 0 1em 8.125%;
     background: #EAEDEF;
     input {
         width: 30%;
+        height: 2rem;
+        border-radius: 5px;
     }
     a {
         text-decoration: none;
@@ -28,6 +34,10 @@ body {
     i {
         float: right;
         padding-right: 1rem;
+    }
+    i:first-of-type {
+        float: left;
+        font-size: 2rem;
     }
 }
 .left-side {
@@ -46,7 +56,11 @@ body {
         padding-bottom: 2rem;
         border-bottom:  2px solid $font-color1;
     }
-    li {
+    i {
+        display: inline-block;
+        padding: .2rem;
+    }
+    p {
         display: inline-block;
     }
 }
@@ -54,5 +68,30 @@ body {
 .right-side {
     @include span-columns(7.5);
     margin-top: 1em;
-
 }
+.content-item {
+    margin: 1rem 0;
+    width: 100%;
+    padding: 2rem;
+    border-bottom: 1px solid $font-color1;
+    h2 {
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    a {
+        color: $font-color2;
+        display: inline-block;
+    }
+}
+
+.item-details {
+    display: inline-block;
+    float: right;
+    font-size: .8rem;
+    color: $font-color1;
+    i {
+        margin-left: .5rem;
+    }
+}
+
+
