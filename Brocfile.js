@@ -19,5 +19,5 @@ funnel('bower_components', {
 
 var compiledCSS = sass(includePaths, 'app.scss', 'app.css');
 
-module.exports = merge(['public', 'bower_components', 'assets/js', compiledCSS, compiledCSS2]);
+module.exports = merge(['public', 'bower_components', 'assets/js', compiledCSS ]);
 
